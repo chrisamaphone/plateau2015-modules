@@ -56,7 +56,7 @@
 \titlebanner{banner above paper title}        % These are ignored unless
 \preprintfooter{short description of paper}   % 'preprint' option specified.
 
-\title{Modularity's Many Masks}
+\title{Modularity's Multitudes}
 % \subtitle{Subtitle Text, if any}
 
 \authorinfo{Darya Kurilova \and Chris Martens}
@@ -74,187 +74,64 @@ This is the text of the abstract.
 % general terms are not compulsory anymore, 
 % you may leave them out
 \terms
-term1, term2
+programming languages, usability
 
 \keywords
-keyword1, keyword2
+modularity, programming
 
 \section{Introduction}
 
-The text of the paper begins here.
+XXX purposes of modularity: code reuse, program comprehension, and
+interoperability.
+
+\begin{itemize}
+  \item {\em Reuse:} program modules should provide general behavior
+    that may be used in a variety of contexts.
+  \item {\em Comprehension:} partitioning code into modules reveals
+    its high-level structure, enabling programmers to understand the system
+    as a whole.
+  \item {\em Separability:} a module may exist independently from other
+    modules, for the sake of separate compilation or distribution.
+  \item {\em Interoperability:} module implementations may change with
+    time, and code that depends on those modules should not have its
+    behavior change when the implementation does.
+\end{itemize}
+
+\subsection{Hypothesis}
+
+\begin{quote}
+  {\bf Our hypothesis:}
+  {\em Modularity}, as a concept in programming, consists of many different
+  constructs, each with different usability benefits. In particular,
+  \begin{enumerate}
+    \item Language designers tend to have very similar goals in mind for
+      adding ``modularity'' constructs to their languages, but the concrete
+      results that they introduce solve distinct problems.
+    \item Modularity constructs intended to enable code reuse,
+      comprehension of high-level program structure, and interoperability
+      serve orthogonal purposes, i.e. {\em programmers tend to use these
+      constructs in ways for which the other constructs would not be
+      suitable}.
+    \item {\em Novice programmers are often confused about the
+      distinctions} between different constructs for modularity and their
+      alleged benefits. 
+  \end{enumerate}
+\end{quote}
+
+\section{A Taxonomy of Modularity Features}
+
+\subsection{Reuse}
+
+\subsection{Comprehension}
+
+\subsection{Separability}
+
+\subsection{Interoperability}
+
+\section{Examples}
+
+\section{Conclusion}
 
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-
-
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
-
-More text.
-
-Lots of text.
 
 \appendix
 \section{Appendix Title}
