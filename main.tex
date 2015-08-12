@@ -1,4 +1,4 @@
-\documentclass{sigplanconf}
+\documentclass{sigplanconf}[10pt]
 
 % The following \documentclass options may be useful:
 
@@ -46,9 +46,9 @@
 \begin{abstract}
 We survey prevailing attitudes around the need for modularity in
 programming languages and examine how these needs are met (or not) by
-existing, concrete features in many languages. The hypothesis we introduce
+existing, concrete features in concurrent languages. The hypothesis we introduce
 is that modularity contains a {\em multitude} of usability concerns,
-and features called modules, packages, libraries, and objects, in many
+and features called modules, packages, libraries, and objects, in various
 languages, address distinct subsets of those concerns. 
 \end{abstract}
 
@@ -56,8 +56,8 @@ languages, address distinct subsets of those concerns.
 
 % general terms are not compulsory anymore, 
 % you may leave them out
-\terms
-programming languages, usability
+%\terms
+%programming languages, usability
 
 \keywords
 modularity, programming
@@ -76,31 +76,34 @@ the other components.
 
 In computing, modularity has struggled to define itself: naively, we want
 similar properties, such as recombination, reuse, and interchangeability of
-components that implement the same interface. But software does not
+components that implement the same interface. However, software does not
 innately contain mechanisms for enforcing the implementation-agnostic
 properties of interfaces, the separability of dependencies, or clear
-guidelines for {\em how} to separate the components of a system.  And while
+guidelines for {\em how} to separate the components of a system.  In addition, while
 modularity may be formalized mathematically as a property of a language
 feature or program (XXX cite derek), its importance unquestionably hinges
 on human processes. 
 
 In this paper we examine the core {\em human}-centered benefits of
-modularity purported by the literature --- specifically {\em
-interoperability}, {\em reusability}, {\em extensibility}, and 
-{\em understandability} --- and describe which features in modern languages
+modularity purported by the literature---specifically {\em
+interoperability}, {\em reusability}, {\em extensibility}, {\em understandability},
+and {\em performance}---and describe which features in modern languages
 support these benefits. 
 We define these terms as follows:
 
 \begin{itemize}
-  \item {\em Interoperability:} module implementations may change with
-    time, and code that depends on those modules should not have its
-    behavior change when the implementation does.
-  \item {\em Reusability:} program modules should provide general behavior
-    that may be used in a variety of contexts.
-  \item {\em Extensibility:} (XXX Darya - fill in)
-  \item {\em Understandability:} partitioning code into modules reveals
-    its high-level structure, enabling programmers to understand the system
-    as a whole.
+  \item {\em Interoperability:} a module can work with other modules 
+  without special effort on the part of the programmer.
+  \item {\em Reusability:} an existing module can be used within the software
+    development process for a purpose not originally intended.
+  \item {\em Extensibility:} a software system's functionality can be enriched
+    by adding new modules with minimal or no effect on the present system's 
+    code.
+  \item {\em Understandability:} by looking at the constituent modules of a 
+    software system, a programmer, new to the system, can comprehend how 
+    the system operates with minimal mental effort.
+  \item {\em Performance:} compilation or interpretation of a software system's
+    code should be time-efficient and proportionate to the size of changes made.
 \end{itemize}
 
 \subsection{Hypothesis}
