@@ -44,7 +44,12 @@
 \maketitle
 
 \begin{abstract}
-This is the text of the abstract.
+We survey prevailing attitudes around the need for modularity in
+programming languages and examine how these needs are met (or not) by
+existing, concrete features in many languages. The hypothesis we introduce
+is that modularity contains a {\em multitude} of usability concerns,
+and features called modules, packages, libraries, and objects, in many
+languages, address distinct subsets of those concerns. 
 \end{abstract}
 
 \category{CR-number}{subcategory}{third-level}
@@ -59,20 +64,43 @@ modularity, programming
 
 \section{Introduction}
 
-XXX purposes of modularity: code reuse, program comprehension, and
-interoperability.
+{\em Modularity} has been studied as a desirable property for designed
+structures, within and outside of computing. In fields concerned with
+physical manufacturing, a {\em modular} design is one composed of
+standardized, interchangeable units, aimed at supporting recombination,
+reuse, and easy replacement of failing parts. There are also implications
+for human labor and assembly: independent manufacturers can specialize in
+designing just one component, and these components can be combined
+according to their interfaces without concern for the implementations of
+the other components.  
+
+In computing, modularity has struggled to define itself: naively, we want
+similar properties, such as recombination, reuse, and interchangeability of
+components that implement the same interface. But software does not
+innately contain mechanisms for enforcing the implementation-agnostic
+properties of interfaces, the separability of dependencies, or clear
+guidelines for {\em how} to separate the components of a system.  And while
+modularity may be formalized mathematically as a property of a language
+feature or program (XXX cite derek), its importance unquestionably hinges
+on human processes. 
+
+In this paper we examine the core {\em human}-centered benefits of
+modularity purported by the literature --- specifically {\em
+interoperability}, {\em reusability}, {\em extensibility}, and 
+{\em understandability} --- and describe which features in modern languages
+support these benefits. 
+We define these terms as follows:
 
 \begin{itemize}
-  \item {\em Reuse:} program modules should provide general behavior
-    that may be used in a variety of contexts.
-  \item {\em Comprehension:} partitioning code into modules reveals
-    its high-level structure, enabling programmers to understand the system
-    as a whole.
-  \item {\em Separability:} a module may exist independently from other
-    modules, for the sake of separate compilation or distribution.
   \item {\em Interoperability:} module implementations may change with
     time, and code that depends on those modules should not have its
     behavior change when the implementation does.
+  \item {\em Reusability:} program modules should provide general behavior
+    that may be used in a variety of contexts.
+  \item {\em Extensibility:} (XXX Darya - fill in)
+  \item {\em Understandability:} partitioning code into modules reveals
+    its high-level structure, enabling programmers to understand the system
+    as a whole.
 \end{itemize}
 
 \subsection{Hypothesis}
@@ -95,6 +123,18 @@ interoperability.
       alleged benefits. 
   \end{enumerate}
 \end{quote}
+
+This hypothesis is {\bf important} and {\bf relevant}: the need for
+modularity's benefits has been well-argued for decades, but these needs are
+thwarted by an inadequate and confusing array of languages and features
+claiming to support ``modularity.'' The hypothesis is {\bf useful} in that
+it can add clarity to the zoo of languages and features that claim to
+support modularity: we envision a future in which modularity feature
+designers clearly assert which benefits they aim to support, and programmer
+clients are less confused about their needs and how to meet them. 
+% XXX this gets into a claim i'm not sure we decided to make...
+ 
+
 
 \section{A Taxonomy of Modularity Features}
 
