@@ -46,7 +46,7 @@
 \begin{abstract}
 We survey prevailing attitudes around the need for modularity in
 programming languages and examine how these needs are met (or not) by
-existing, concrete features in concurrent languages. The hypothesis we introduce
+existing, concrete features in concurrent languages. The hypotheses we introduce
 is that modularity contains a {\em multitude} of usability concerns,
 and features called modules, packages, libraries, and objects, in various
 languages, address distinct subsets of those concerns. 
@@ -106,32 +106,32 @@ We define these terms as follows:
     code should be time-efficient and proportionate to the size of changes made.
 \end{itemize}
 
-\subsection{Hypothesis}
+\section{Hypotheses}
 
-\begin{quote}
-  {\bf Our hypothesis:}
-  {\em Modularity}, as a concept in programming, consists of many different
-  constructs, each with different usability benefits. In particular,
-  \begin{enumerate}
-    \item Language designers tend to have very similar goals in mind for
+{\em Modularity}, as a concept in programming, consists of many different
+constructs, each with different usability benefits.
+
+We state the following three hypotheses:
+
+\begin{description}
+    \item[H1:] Programming language designers tend to have similar goals in mind for
       adding ``modularity'' constructs to their languages, but the concrete
-      results that they introduce solve distinct problems.
-    \item Modularity constructs intended to enable code reuse,
+      features that they introduce solve distinct problems.
+    \item[H2:] Modularity constructs intended to enable code reuse,
       comprehension of high-level program structure, and interoperability
-      serve orthogonal purposes, i.e. {\em programmers tend to use these
+      serve orthogonal purposes, i.e. programmers tend to use these
       constructs in ways for which the other constructs would not be
-      suitable}.
-    \item {\em Novice programmers are often confused about the
-      distinctions} between different constructs for modularity and their
+      suitable.
+    \item[H3:] Novice programmers are often confused about the
+      distinctions between different constructs for modularity and their
       alleged benefits. 
-  \end{enumerate}
-\end{quote}
+\end{description}
 
-This hypothesis is {\bf important} and {\bf relevant}: the need for
+These hypotheses are {\bf important} and {\bf relevant}: the need for
 modularity's benefits has been well-argued for decades, but these needs are
 thwarted by an inadequate and confusing array of languages and features
-claiming to support ``modularity.'' The hypothesis is {\bf useful} in that
-it can add clarity to the zoo of languages and features that claim to
+claiming to support ``modularity.'' The hypotheses are {\bf useful} in that
+they can add clarity to the zoo of languages and features that claim to
 support modularity: we envision a future in which modularity feature
 designers clearly assert which benefits they aim to support, and programmer
 clients are less confused about their needs and how to meet them. 
